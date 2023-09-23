@@ -1,0 +1,69 @@
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling bh1750fvi.c...
+..\SYSTEM\usart\usart.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\I2C\i2c.h(22): warning:  #1295-D: Deprecated declaration I2C_SDAIn - give arg types
+  void I2C_SDAIn();
+..\HARDWARE\I2C\i2c.h(23): warning:  #1295-D: Deprecated declaration I2C_SDAOut - give arg types
+  void I2C_SDAOut();
+..\HARDWARE\I2C\i2c.h(31): warning:  #1295-D: Deprecated declaration I2C_ReadByte - give arg types
+  u8 I2C_ReadByte();
+..\HARDWARE\I2C\i2c.h(34): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\BH1750FVI\bh1750fvi.h(31): warning:  #1295-D: Deprecated declaration BH1750_ReadByte - give arg types
+  u16 BH1750_ReadByte();
+..\HARDWARE\BH1750FVI\bh1750fvi.h(33): warning:  #1295-D: Deprecated declaration BH1750_GetLight - give arg types
+  float BH1750_GetLight();
+..\HARDWARE\BH1750FVI\bh1750fvi.h(35): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\BH1750FVI\bh1750fvi.c(38): warning:  #940-D: missing return statement at end of non-void function "BH1750_Init" 
+  }
+..\HARDWARE\BH1750FVI\bh1750fvi.c: 9 warnings, 0 errors
+compiling main.c...
+..\SYSTEM\usart\usart.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+dht11.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\TIM\tim.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\I2C\i2c.h(22): warning:  #1295-D: Deprecated declaration I2C_SDAIn - give arg types
+  void I2C_SDAIn();
+..\HARDWARE\I2C\i2c.h(23): warning:  #1295-D: Deprecated declaration I2C_SDAOut - give arg types
+  void I2C_SDAOut();
+..\HARDWARE\I2C\i2c.h(31): warning:  #1295-D: Deprecated declaration I2C_ReadByte - give arg types
+  u8 I2C_ReadByte();
+..\HARDWARE\I2C\i2c.h(34): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\BH1750FVI\bh1750fvi.h(31): warning:  #1295-D: Deprecated declaration BH1750_ReadByte - give arg types
+  u16 BH1750_ReadByte();
+..\HARDWARE\BH1750FVI\bh1750fvi.h(33): warning:  #1295-D: Deprecated declaration BH1750_GetLight - give arg types
+  float BH1750_GetLight();
+..\HARDWARE\BH1750FVI\bh1750fvi.h(35): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c(15): warning:  #177-D: variable "temp"  was declared but never referenced
+  	u16 temp = 0, humi = 0;
+main.c(15): warning:  #177-D: variable "humi"  was declared but never referenced
+  	u16 temp = 0, humi = 0;
+main.c(16): warning:  #177-D: variable "light"  was declared but never referenced
+  	float light;
+main.c: 13 warnings, 0 errors
+compiling i2c.c...
+..\SYSTEM\usart\usart.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\I2C\i2c.h(22): warning:  #1295-D: Deprecated declaration I2C_SDAIn - give arg types
+  void I2C_SDAIn();
+..\HARDWARE\I2C\i2c.h(23): warning:  #1295-D: Deprecated declaration I2C_SDAOut - give arg types
+  void I2C_SDAOut();
+..\HARDWARE\I2C\i2c.h(31): warning:  #1295-D: Deprecated declaration I2C_ReadByte - give arg types
+  u8 I2C_ReadByte();
+..\HARDWARE\I2C\i2c.h(34): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\HARDWARE\I2C\i2c.c(3): warning:  #177-D: variable "I2CTimeout"  was declared but never referenced
+  static u16 I2CTimeout = 0;
+..\HARDWARE\I2C\i2c.c: 6 warnings, 0 errors
+linking...
+Program Size: Code=10068 RO-data=600 RW-data=52 ZI-data=1684  
+FromELF: creating hex file...
+".\Objects\Test.axf" - 0 Error(s), 28 Warning(s).
+Build Time Elapsed:  00:00:01
