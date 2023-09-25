@@ -45,5 +45,6 @@
 .\objects\main.o: ..\HARDWARE\BH1750FVI\bh1750fvi.h
 .\objects\main.o: ..\HARDWARE\DRV8837\drv8837.h
 .\objects\main.o: ..\SYSTEM\usart6\usart6.h
+.\objects\main.o: ..\HARDWARE\SK6812\sk6812.h
 .\objects\main.o: ..\HARDWARE\BKRCSPEAK\bkrcspeak.h
 .\objects\main.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdio.h

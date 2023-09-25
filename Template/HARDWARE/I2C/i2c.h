@@ -18,7 +18,6 @@
 
 
 void IIC_Init(void);
-void IIC_SDAOut(void);
 void IIC_Start(void);
 void IIC_Stop(void);
 void IIC_Ack(void);

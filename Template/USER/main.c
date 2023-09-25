@@ -8,6 +8,7 @@
 #include "bh1750fvi.h"
 #include "drv8837.h"
 #include "usart6.h"
+#include "sk6812.h"
 #include "bkrcspeak.h"
 #include <stdio.h>
 
@@ -18,22 +19,22 @@ int main(void)
 {
 	u16 temp = 0, humi = 0;
 	float light;
+	RGB_TypeDef rgb;
 	char buf[50];
 	
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	Delay_Init();
 	USART1_Init(115200);
 	USART6_Init(115200);
-	//USART6_Init(57600);
 	DHT11_Init();
 	BEEP_Init();
 	TIM14_PWMInit(84-1, 1000);
 	TIM4_PWMInit(84-1, 1000);
-	//TIM_SetCompare1(TIM14, 500);
-	//IIC_Init();
-	//BH1750_Init(ONETIME_H_Mode);
-	//DRV8837_Mode(DRV8837_Mode2);
-	USART_SendString(USART1, "Test Video\r\n");
+	IIC_Init();
+	BH1750_Init(ONETIME_H_Mode);
+	DRV8837_Mode(DRV8837_Mode1);
+	SK6812_Init();
+	USART_SendString(USART1, "Test Sk6812\r\n");
 	
 	while(1)
 	{
@@ -53,7 +54,27 @@ int main(void)
 		USART_SendString(USART1, buf);
 		Delay_ms(500);	
 #endif
-		Voice_Control();
+		//Voice_Control();
+
+#if 0		
+		//测试可变LED灯
+		rgb.green = 0xFF;
+		rgb.red = 0x00;
+		rgb.blue = 0x00;
+		SK6812_WriteRGB(&rgb);
+		Delay_ms(500);
+		rgb.green = 0x00;
+		rgb.red = 0xFF;
+		rgb.blue = 0x00;
+		SK6812_WriteRGB(&rgb);
+		Delay_ms(500);
+		rgb.green = 0x00;
+		rgb.red = 0x00;
+		rgb.blue = 0xFF;
+		SK6812_WriteRGB(&rgb);
+		Delay_ms(500);
+#endif
+		SK6812_Breath();
 	} 
 }
 

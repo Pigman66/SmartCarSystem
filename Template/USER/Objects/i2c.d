@@ -36,3 +36,7 @@
 .\objects\i2c.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\i2c.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 .\objects\i2c.o: ..\SYSTEM\delay\delay.h
+.\objects\i2c.o: ..\SYSTEM\usart\usart.h
+.\objects\i2c.o: ..\HARDWARE\LED\led.h
+.\objects\i2c.o: ..\SYSTEM\sys\sys.h
+.\objects\i2c.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdio.h

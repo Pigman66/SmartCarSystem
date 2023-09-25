@@ -1,4 +1,6 @@
 #include "i2c.h"
+#include "usart.h"
+#include <stdio.h>
 
 
 /*初始化I2C2*/
@@ -19,34 +21,13 @@ void IIC_Init(void)
 	
 	/*初始化SDA引脚*/
 	gpio.GPIO_Pin = SDA_PIN;
+	gpio.GPIO_Mode = GPIO_Mode_OUT;
+	gpio.GPIO_OType = GPIO_OType_OD;
 	GPIO_Init(SDA_PORT, &gpio);
 	
 	GPIO_SetBits(SCL_PORT, SCL_PIN);
 	GPIO_SetBits(SDA_PORT, SDA_PIN);
 	
-}
-
-/*将SDA配置为输出*/
-void IIC_SDAOut(void)
-{
-	GPIO_InitTypeDef  gpio;
-	
-	gpio.GPIO_Pin = SCL_PIN;
-	gpio.GPIO_Mode = GPIO_Mode_OUT;
-	gpio.GPIO_OType = GPIO_OType_PP;
-	gpio.GPIO_Speed = GPIO_Speed_100MHz;
- 	GPIO_Init(SDA_PORT, &gpio);
-}
-
-/*将SDA配置为输入*/
-void IIC_SDAIn(void)
-{
-	GPIO_InitTypeDef  gpio;
-	
-	gpio.GPIO_Pin = SDA_PIN;				
-	gpio.GPIO_Mode = GPIO_Mode_IN;
- 	gpio.GPIO_PuPd = GPIO_PuPd_NOPULL;
- 	GPIO_Init(SDA_PORT, &gpio);
 }
 
 /*产生一个起始信号*/
@@ -55,30 +36,33 @@ void IIC_Start(void)
 	
 	SCL_High();
 	SDA_High();
-	Delay_us(5);
+	Delay_us(4);
 	SDA_Low();
-	Delay_us(5);
+	Delay_us(4);
+	SCL_Low();
+	Delay_us(2);
 }
 
 /*产生一个stop信号*/
 void IIC_Stop(void)
 {
-	SCL_Low();
 	SDA_Low();
+	Delay_us(2);
 	SCL_High();
-	Delay_us(5);
+	Delay_us(4);
 	SDA_High();
-	Delay_us(5);
+	Delay_us(4);
 }
 
 /*产生一个ACK信号*/
 void IIC_Ack(void)
 {
 	SCL_Low();
+	Delay_us(2);
 	SDA_Low();
 	Delay_us(2);
 	SCL_High();
-	Delay_us(5);
+	Delay_us(4);
 	SCL_Low();
 }
 
@@ -86,24 +70,29 @@ void IIC_Ack(void)
 void IIC_NAck(void)
 {
 	SCL_Low();
+	Delay_us(2);
 	SDA_High();
 	Delay_us(2);
 	SCL_High();
-	Delay_us(5);
+	Delay_us(4);
 	SCL_Low();
 }
+
 
 /*等待ACK应答信号*/
 u8 IIC_WaitAck(void)
 {
 	u8 timeout = 0;
-	
+	char buf[50];
 	SCL_Low();
 	Delay_us(1);
 	SDA_High();
 	Delay_us(1);
 	SCL_High();
 	Delay_us(1);
+	
+	sprintf(buf, "SDA:%d\r\n", SDA_Data());
+	USART_SendString(USART1, buf);
 	
 	while(SDA_Data()) //等于1没有接受到ACK信号
 	{
@@ -115,6 +104,7 @@ u8 IIC_WaitAck(void)
 		}
 	}
 	SCL_Low();
+	Delay_us(2);
 	return 0;
 }
 
@@ -130,14 +120,14 @@ void IIC_SendByte(u8 data)
 		else
 			SDA_Low();
 		
-		data <<= 1;
-		
 		Delay_us(2);
 		SCL_High();
 		Delay_us(2);
 		SCL_Low();
 		Delay_us(2);
+		data <<= 1;
 	}
+	SDA_High(); //释放SDA线
 }
 
 u8 IIC_ReadByte(void)
@@ -153,7 +143,9 @@ u8 IIC_ReadByte(void)
 		reVal <<= 1;
 		if(SDA_Data())
 			reVal++;
-		Delay_us(1);
+		Delay_us(2);
 	}
+	
+	return reVal;
 }
 

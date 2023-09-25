@@ -40,3 +40,4 @@
 .\objects\bh1750fvi.o: ..\SYSTEM\usart\usart.h
 .\objects\bh1750fvi.o: ..\HARDWARE\LED\led.h
 .\objects\bh1750fvi.o: ..\SYSTEM\sys\sys.h
+.\objects\bh1750fvi.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdio.h

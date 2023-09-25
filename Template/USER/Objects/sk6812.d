@@ -35,3 +35,4 @@
 .\objects\sk6812.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\sk6812.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\sk6812.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+.\objects\sk6812.o: ..\SYSTEM\delay\delay.h
