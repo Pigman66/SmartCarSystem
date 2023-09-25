@@ -2,7 +2,7 @@
 .\objects\sk6812.o: ..\HARDWARE\SK6812\sk6812.h
 .\objects\sk6812.o: ..\CMSIS\stm32f4xx.h
 .\objects\sk6812.o: ..\CMSIS\core_cm4.h
-.\objects\sk6812.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sk6812.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\sk6812.o: ..\CMSIS\core_cmInstr.h
 .\objects\sk6812.o: ..\CMSIS\core_cmFunc.h
 .\objects\sk6812.o: ..\CMSIS\core_cmSimd.h

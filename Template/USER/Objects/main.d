@@ -1,7 +1,7 @@
 .\objects\main.o: main.c
 .\objects\main.o: ..\CMSIS\stm32f4xx.h
 .\objects\main.o: ..\CMSIS\core_cm4.h
-.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: ..\CMSIS\core_cmInstr.h
 .\objects\main.o: ..\CMSIS\core_cmFunc.h
 .\objects\main.o: ..\CMSIS\core_cmSimd.h
@@ -36,10 +36,14 @@
 .\objects\main.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 .\objects\main.o: ..\SYSTEM\delay\delay.h
 .\objects\main.o: ..\SYSTEM\usart\usart.h
+.\objects\main.o: ..\HARDWARE\LED\led.h
+.\objects\main.o: ..\SYSTEM\sys\sys.h
 .\objects\main.o: ..\HARDWARE\BEEP\beep.h
 .\objects\main.o: dht11.h
 .\objects\main.o: ..\HARDWARE\TIM\tim.h
 .\objects\main.o: ..\HARDWARE\I2C\i2c.h
 .\objects\main.o: ..\HARDWARE\BH1750FVI\bh1750fvi.h
 .\objects\main.o: ..\HARDWARE\DRV8837\drv8837.h
-.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: ..\SYSTEM\usart6\usart6.h
+.\objects\main.o: ..\HARDWARE\BKRCSPEAK\bkrcspeak.h
+.\objects\main.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdio.h

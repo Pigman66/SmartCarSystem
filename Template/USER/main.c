@@ -7,6 +7,8 @@
 #include "i2c.h"
 #include "bh1750fvi.h"
 #include "drv8837.h"
+#include "usart6.h"
+#include "bkrcspeak.h"
 #include <stdio.h>
 
 extern u8 usart1_buff[USART_BUFFER_SIZE];
@@ -21,15 +23,17 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	Delay_Init();
 	USART1_Init(115200);
+	USART6_Init(115200);
+	//USART6_Init(57600);
 	DHT11_Init();
 	BEEP_Init();
 	TIM14_PWMInit(84-1, 1000);
 	TIM4_PWMInit(84-1, 1000);
 	//TIM_SetCompare1(TIM14, 500);
-	IIC_Init();
-	BH1750_Init(ONETIME_H_Mode);
+	//IIC_Init();
+	//BH1750_Init(ONETIME_H_Mode);
 	//DRV8837_Mode(DRV8837_Mode2);
-	USART_SendString(USART1, "Test DRV8837\r\n");
+	USART_SendString(USART1, "Test Video\r\n");
 	
 	while(1)
 	{
@@ -44,11 +48,12 @@ int main(void)
 #endif
 				
 		
-	//测试BH1750
+#if 0	//测试BH1750
 		sprintf(buf, "light:%2.1f lx\r\n", BH1750_GetLight());
 		USART_SendString(USART1, buf);
 		Delay_ms(500);	
-	
+#endif
+		Voice_Control();
 	} 
 }
 

@@ -2,7 +2,7 @@
 .\objects\bh1750fvi.o: ..\HARDWARE\BH1750FVI\bh1750fvi.h
 .\objects\bh1750fvi.o: ..\CMSIS\stm32f4xx.h
 .\objects\bh1750fvi.o: ..\CMSIS\core_cm4.h
-.\objects\bh1750fvi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bh1750fvi.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\bh1750fvi.o: ..\CMSIS\core_cmInstr.h
 .\objects\bh1750fvi.o: ..\CMSIS\core_cmFunc.h
 .\objects\bh1750fvi.o: ..\CMSIS\core_cmSimd.h
@@ -38,3 +38,5 @@
 .\objects\bh1750fvi.o: ..\HARDWARE\I2C\i2c.h
 .\objects\bh1750fvi.o: ..\SYSTEM\delay\delay.h
 .\objects\bh1750fvi.o: ..\SYSTEM\usart\usart.h
+.\objects\bh1750fvi.o: ..\HARDWARE\LED\led.h
+.\objects\bh1750fvi.o: ..\SYSTEM\sys\sys.h

@@ -2,7 +2,7 @@
 .\objects\i2c.o: ..\HARDWARE\I2C\i2c.h
 .\objects\i2c.o: ..\CMSIS\stm32f4xx.h
 .\objects\i2c.o: ..\CMSIS\core_cm4.h
-.\objects\i2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2c.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\i2c.o: ..\CMSIS\core_cmInstr.h
 .\objects\i2c.o: ..\CMSIS\core_cmFunc.h
 .\objects\i2c.o: ..\CMSIS\core_cmSimd.h

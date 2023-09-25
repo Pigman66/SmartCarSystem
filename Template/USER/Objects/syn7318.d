@@ -2,7 +2,7 @@
 .\objects\syn7318.o: ..\HARDWARE\SYN7318\syn7318.h
 .\objects\syn7318.o: ..\CMSIS\stm32f4xx.h
 .\objects\syn7318.o: ..\CMSIS\core_cm4.h
-.\objects\syn7318.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\syn7318.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\syn7318.o: ..\CMSIS\core_cmInstr.h
 .\objects\syn7318.o: ..\CMSIS\core_cmFunc.h
 .\objects\syn7318.o: ..\CMSIS\core_cmSimd.h
@@ -36,4 +36,6 @@
 .\objects\syn7318.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\syn7318.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 .\objects\syn7318.o: ..\SYSTEM\usart\usart.h
+.\objects\syn7318.o: ..\HARDWARE\LED\led.h
+.\objects\syn7318.o: ..\SYSTEM\sys\sys.h
 .\objects\syn7318.o: ..\SYSTEM\delay\delay.h

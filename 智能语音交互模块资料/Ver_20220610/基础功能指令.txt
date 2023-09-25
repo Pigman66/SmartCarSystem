@@ -1,0 +1,36 @@
+
+FAFAFAFAAAXX	设置音量 会写入config 重启也生效 注意的是，设定录音音量为 100 时，串口输入“0xFAFAFAFAAA1000”
+FAFAFAFABBXX	设置语句临时识别阈值
+FAFAFAFADDXXYY	用来设定临时语音识别阈值和VAD 阈值
+
+FAFAFAFAA1		唤醒
+FAFAFAFAA2 		打开播放
+FAFAFAFAA3		关闭播放
+FAFAFAFAA4		进入休眠
+
+FAFAFAFA80		开启学习状态（开启动态更新状态）
+FAFAFAFA01XX	开始学习 asrWordlist.txt 中UART 输出为 XX 的语音指令
+FAFAFAFA02XX	删除已学习的 XX 的语音指令
+FAFAFAFA03		停止当前指令的学习  
+FAFAFAFA04		进入唤醒词学习 
+FAFAFAFA05		删除已学习的唤醒词
+FAFAFAFA21XX	查询已学习的控制指令（UART输出为XX）条数
+FAFAFAFA21  	跳过当前学习的指令，进入下一条方言学习（语音进入方言学习状态是生效）
+FAFAFAFA22		查询已学习的唤醒词条数
+FAFAFAFA81		退出学习状态 
+FAFAFAFA82		删除所有已学习的控制指令
+
+FAFAFAFA23		串口获得固件版本号及程序版本号，程序的md5值。以#分隔.
+FAFAFAFA24		句本版本asrWordlist.txt/serialTTS.txt/config.ini，以#间隔,读取这些文件中的version字段的值自为版本号，
+							如version=v2.2.2.25，＝号左右不要加空格。
+				
+FAFAFAFFFF		重启语音大脑（要添加） 
+
+FE01			调大音量	
+FE03			调小音量
+FE06			切换区域 
+
+
+
+
+

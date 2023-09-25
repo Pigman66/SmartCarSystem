@@ -2,7 +2,7 @@
 .\objects\drv8837.o: ..\HARDWARE\DRV8837\drv8837.h
 .\objects\drv8837.o: ..\CMSIS\stm32f4xx.h
 .\objects\drv8837.o: ..\CMSIS\core_cm4.h
-.\objects\drv8837.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\drv8837.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\drv8837.o: ..\CMSIS\core_cmInstr.h
 .\objects\drv8837.o: ..\CMSIS\core_cmFunc.h
 .\objects\drv8837.o: ..\CMSIS\core_cmSimd.h

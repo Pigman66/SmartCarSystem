@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CMSIS;..\HARDWARE;..\SYSTEM;..\USER;..\FWLIB\inc;..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\DHT11;..\HARDWARE\TIM;..\HARDWARE\I2C;..\HARDWARE\BH1750FVI;..\HARDWARE\DRV8837;..\HARDWARE\SK6812;..\HARDWARE\BEEP;..\HARDWARE\SYN7318</IncludePath>
+              <IncludePath>..\CMSIS;..\HARDWARE;..\SYSTEM;..\USER;..\FWLIB\inc;..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\DHT11;..\HARDWARE\TIM;..\HARDWARE\I2C;..\HARDWARE\BH1750FVI;..\HARDWARE\DRV8837;..\HARDWARE\SK6812;..\HARDWARE\BEEP;..\HARDWARE\SYN7318;..\HARDWARE\BKRCSPEAK;..\SYSTEM\usart6</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -409,6 +409,11 @@
               <FileType>1</FileType>
               <FilePath>..\SYSTEM\usart\usart.c</FilePath>
             </File>
+            <File>
+              <FileName>usart6.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\usart6\usart6.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -455,9 +460,9 @@
               <FilePath>..\HARDWARE\BEEP\beep.c</FilePath>
             </File>
             <File>
-              <FileName>syn7318.c</FileName>
+              <FileName>bkrcspeak.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\HARDWARE\SYN7318\syn7318.c</FilePath>
+              <FilePath>..\HARDWARE\BKRCSPEAK\bkrcspeak.c</FilePath>
             </File>
           </Files>
         </Group>
