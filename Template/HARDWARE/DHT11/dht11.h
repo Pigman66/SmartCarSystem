@@ -4,9 +4,9 @@
 #include "delay.h"
 
 
-#define  DHT11_CLK				RCC_AHB1Periph_GPIOF
-#define	 DHT11_DQ_PORT			GPIOF
-#define  DHT11_DQ_PIN			GPIO_Pin_8
+#define  DHT11_CLK				RCC_AHB1Periph_GPIOC
+#define	 DHT11_DQ_PORT			GPIOC
+#define  DHT11_DQ_PIN			GPIO_Pin_3
 
 #define  DHT11_DQ_In		GPIO_ReadInputDataBit(DHT11_DQ_PORT, DHT11_DQ_PIN)
 #define  DHT11_DQ_Out(X)	GPIO_WriteBit(DHT11_DQ_PORT, DHT11_DQ_PIN, (BitAction)X)

@@ -1,35 +1,21 @@
-#ifndef  __BH1750FVI_H
-#define  __BH1750FVI_H
+#ifndef __BH1750_H__
+#define __BH1750_H__
+
 #include "stm32f4xx.h"
+#include "delay.h"
 #include "i2c.h"
+#include "usart.h"
 
-// BH1750指令
-#define POWER_OFF				0x00
-#define POWER_ON				0x01
-#define MODULE_RESET			0x07
-#define	CHMODE_CMD				0x10
-#define CHMODE2_CMD				0x11
-#define CLMODE2_CMD				0x13
-#define OHMODE_CMD				0x20
-#define OHMODE2_CMD				0x21
-#define OLMODE_CMD				0x23
 
-/*测量模式*/
-typedef enum {
-	CONTINUE_H_Mode = 0,
-	CONTINUE_H_Mode2,
-	CONTINUE_L_Mode,
-	ONETIME_H_Mode,
-	ONETIME_H_Mode2,
-	ONETIME_L_Mode
-}BH1750Mode_t;
+#define BH1750_Addr 0x46				//0100 0110   即地址位 = 0；
+#define BH1750_ON   0x01
+#define BH1750_CON  0x10
+#define BH1750_ONE  0x20
+#define BH1750_RSET 0x07
 
-#define  I2C_WRITE_ADDR		0x46	//写操作地址
-#define  I2C_READ_ADDR		0x47	//读操作地址
-
-u8 BH1750_Init(BH1750Mode_t mode);
-void BH1750_ReadByte();
-void BH1750_WriteByte(u8 data);
-float BH1750_GetLight();
-
+void BH1750_Init(void);					//IO初始化，
+void Start_BH1750(void);				//上电，设置清除数据寄存器
+void Read_BH1750(void);					//连续的读取内部寄存器数据
+void Convert_BH1750(void);
+float BH1750_GetLight(void); 
 #endif

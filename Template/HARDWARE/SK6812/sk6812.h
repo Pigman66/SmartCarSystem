@@ -5,7 +5,7 @@
 
 #define  SK6812_CLK		RCC_AHB1Periph_GPIOG
 #define  SK6812_PORT	GPIOG
-#define  SK6812_PIN		GPIO_Pin_4
+#define  SK6812_PIN		GPIO_Pin_7
 
 #define  DQ(X)	GPIO_WriteBit(SK6812_PORT, SK6812_PIN, (BitAction)(X))
 

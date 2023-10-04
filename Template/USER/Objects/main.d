@@ -1,7 +1,7 @@
 .\objects\main.o: main.c
 .\objects\main.o: ..\CMSIS\stm32f4xx.h
 .\objects\main.o: ..\CMSIS\core_cm4.h
-.\objects\main.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: ..\CMSIS\core_cmInstr.h
 .\objects\main.o: ..\CMSIS\core_cmFunc.h
 .\objects\main.o: ..\CMSIS\core_cmSimd.h
@@ -47,4 +47,6 @@
 .\objects\main.o: ..\SYSTEM\usart6\usart6.h
 .\objects\main.o: ..\HARDWARE\SK6812\sk6812.h
 .\objects\main.o: ..\HARDWARE\BKRCSPEAK\bkrcspeak.h
-.\objects\main.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: ..\HARDWARE\BISS0001\biss0001.h
+.\objects\main.o: ..\HARDWARE\SG90\sg90.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

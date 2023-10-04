@@ -2,7 +2,7 @@
 .\objects\dht11.o: ..\HARDWARE\DHT11\dht11.h
 .\objects\dht11.o: ..\CMSIS\stm32f4xx.h
 .\objects\dht11.o: ..\CMSIS\core_cm4.h
-.\objects\dht11.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\dht11.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\dht11.o: ..\CMSIS\core_cmInstr.h
 .\objects\dht11.o: ..\CMSIS\core_cmFunc.h
 .\objects\dht11.o: ..\CMSIS\core_cmSimd.h

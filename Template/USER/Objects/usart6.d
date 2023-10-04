@@ -2,7 +2,7 @@
 .\objects\usart6.o: ..\SYSTEM\usart6\usart6.h
 .\objects\usart6.o: ..\CMSIS\stm32f4xx.h
 .\objects\usart6.o: ..\CMSIS\core_cm4.h
-.\objects\usart6.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usart6.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usart6.o: ..\CMSIS\core_cmInstr.h
 .\objects\usart6.o: ..\CMSIS\core_cmFunc.h
 .\objects\usart6.o: ..\CMSIS\core_cmSimd.h

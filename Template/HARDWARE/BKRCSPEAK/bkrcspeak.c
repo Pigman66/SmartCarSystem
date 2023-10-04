@@ -5,6 +5,25 @@ uint8_t status = 0;
 uint8_t tips = 0;
 uint16_t delay_i = 0;
 
+/*初始化控制引脚*/
+void Voice_Init(void)
+{
+	GPIO_InitTypeDef gpio;
+	
+	RCC_AHB1PeriphClockCmd(CTRL_CLK, ENABLE);
+	
+	gpio.GPIO_Mode = GPIO_Mode_OUT;
+	gpio.GPIO_OType = GPIO_OType_OD;
+	gpio.GPIO_Pin = CTRL_PIN;
+	gpio.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	gpio.GPIO_Speed = GPIO_Speed_100MHz;
+	GPIO_Init(CTRL_PORT, &gpio);
+	
+	GPIO_SetBits(CTRL_PORT, CTRL_PIN); //默认输出高阻态
+	
+	USART6_Init(115200); //初始化串口
+}
+
 /*语音识别，返回识别到的词条id*/
 uint8_t Voice_Manage(void)
 {

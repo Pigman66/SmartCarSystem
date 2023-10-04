@@ -1,8 +1,9 @@
 .\objects\i2c.o: ..\HARDWARE\I2C\i2c.c
 .\objects\i2c.o: ..\HARDWARE\I2C\i2c.h
+.\objects\i2c.o: ..\SYSTEM\sys\sys.h
 .\objects\i2c.o: ..\CMSIS\stm32f4xx.h
 .\objects\i2c.o: ..\CMSIS\core_cm4.h
-.\objects\i2c.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\i2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\i2c.o: ..\CMSIS\core_cmInstr.h
 .\objects\i2c.o: ..\CMSIS\core_cmFunc.h
 .\objects\i2c.o: ..\CMSIS\core_cmSimd.h
@@ -36,7 +37,3 @@
 .\objects\i2c.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\i2c.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 .\objects\i2c.o: ..\SYSTEM\delay\delay.h
-.\objects\i2c.o: ..\SYSTEM\usart\usart.h
-.\objects\i2c.o: ..\HARDWARE\LED\led.h
-.\objects\i2c.o: ..\SYSTEM\sys\sys.h
-.\objects\i2c.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdio.h

@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CMSIS;..\HARDWARE;..\SYSTEM;..\USER;..\FWLIB\inc;..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\DHT11;..\HARDWARE\TIM;..\HARDWARE\I2C;..\HARDWARE\BH1750FVI;..\HARDWARE\DRV8837;..\HARDWARE\SK6812;..\HARDWARE\BEEP;..\HARDWARE\SYN7318;..\HARDWARE\BKRCSPEAK;..\SYSTEM\usart6</IncludePath>
+              <IncludePath>..\CMSIS;..\HARDWARE;..\SYSTEM;..\USER;..\FWLIB\inc;..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\DHT11;..\HARDWARE\TIM;..\HARDWARE\I2C;..\HARDWARE\BH1750FVI;..\HARDWARE\DRV8837;..\HARDWARE\SK6812;..\HARDWARE\BEEP;..\HARDWARE\SYN7318;..\HARDWARE\BKRCSPEAK;..\SYSTEM\usart6;..\HARDWARE\BISS0001</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -463,6 +463,11 @@
               <FileName>bkrcspeak.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\BKRCSPEAK\bkrcspeak.c</FilePath>
+            </File>
+            <File>
+              <FileName>biss0001.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\BISS0001\biss0001.c</FilePath>
             </File>
           </Files>
         </Group>

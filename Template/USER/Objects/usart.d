@@ -2,7 +2,7 @@
 .\objects\usart.o: ..\SYSTEM\usart\usart.h
 .\objects\usart.o: ..\CMSIS\stm32f4xx.h
 .\objects\usart.o: ..\CMSIS\core_cm4.h
-.\objects\usart.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usart.o: ..\CMSIS\core_cmInstr.h
 .\objects\usart.o: ..\CMSIS\core_cmFunc.h
 .\objects\usart.o: ..\CMSIS\core_cmSimd.h
@@ -38,4 +38,4 @@
 .\objects\usart.o: ..\HARDWARE\LED\led.h
 .\objects\usart.o: ..\SYSTEM\sys\sys.h
 .\objects\usart.o: ..\SYSTEM\delay\delay.h
-.\objects\usart.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

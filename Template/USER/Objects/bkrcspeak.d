@@ -2,7 +2,7 @@
 .\objects\bkrcspeak.o: ..\HARDWARE\BKRCSPEAK\bkrcspeak.h
 .\objects\bkrcspeak.o: ..\CMSIS\stm32f4xx.h
 .\objects\bkrcspeak.o: ..\CMSIS\core_cm4.h
-.\objects\bkrcspeak.o: D:\a-lzb\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bkrcspeak.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\bkrcspeak.o: ..\CMSIS\core_cmInstr.h
 .\objects\bkrcspeak.o: ..\CMSIS\core_cmFunc.h
 .\objects\bkrcspeak.o: ..\CMSIS\core_cmSimd.h

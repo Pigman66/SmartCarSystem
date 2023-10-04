@@ -76,7 +76,7 @@ void SK6812_Breath(void)
 		SK6812_WriteByte(rgb.red);
 		SK6812_WriteByte(rgb.blue);
 		Delay_ms(7);
-		rgb.red++;
+		rgb.green++;
 	}
 	for(i = 0; i < 255; i++)
 	{
@@ -85,6 +85,6 @@ void SK6812_Breath(void)
 		SK6812_WriteByte(rgb.red);
 		SK6812_WriteByte(rgb.blue);
 		Delay_ms(5);
-		rgb.red--;
+		rgb.green--;
 	}
 }
