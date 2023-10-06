@@ -21,7 +21,7 @@ void Voice_Init(void)
 	
 	GPIO_SetBits(CTRL_PORT, CTRL_PIN); //默认输出高阻态
 	
-	USART6_Init(115200); //初始化串口
+	//USART6_Init(115200); //初始化串口
 }
 
 /*语音识别，返回识别到的词条id*/
