@@ -35,3 +35,11 @@
 .\objects\usart6.o: ..\FWLIB\inc\stm32f4xx_dac.h
 .\objects\usart6.o: ..\FWLIB\inc\stm32f4xx_dcmi.h
 .\objects\usart6.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
+.\objects\usart6.o: ..\HARDWARE\C1016\c1016.h
+.\objects\usart6.o: ..\SYSTEM\usart\usart.h
+.\objects\usart6.o: ..\HARDWARE\LED\led.h
+.\objects\usart6.o: ..\SYSTEM\sys\sys.h
+.\objects\usart6.o: ..\SYSTEM\delay\delay.h
+.\objects\usart6.o: ..\HARDWARE\BEEP\beep.h
+.\objects\usart6.o: ..\HARDWARE\TIM\tim.h
+.\objects\usart6.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -40,13 +40,15 @@
 .\objects\main.o: ..\SYSTEM\sys\sys.h
 .\objects\main.o: ..\HARDWARE\BEEP\beep.h
 .\objects\main.o: dht11.h
+.\objects\main.o: ..\HARDWARE\KEY\key.h
 .\objects\main.o: ..\HARDWARE\TIM\tim.h
 .\objects\main.o: ..\HARDWARE\I2C\i2c.h
 .\objects\main.o: ..\HARDWARE\BH1750FVI\bh1750fvi.h
 .\objects\main.o: ..\HARDWARE\DRV8837\drv8837.h
-.\objects\main.o: ..\SYSTEM\usart6\usart6.h
 .\objects\main.o: ..\HARDWARE\SK6812\sk6812.h
 .\objects\main.o: ..\HARDWARE\BKRCSPEAK\bkrcspeak.h
+.\objects\main.o: ..\SYSTEM\usart6\usart6.h
 .\objects\main.o: ..\HARDWARE\BISS0001\biss0001.h
 .\objects\main.o: ..\HARDWARE\SG90\sg90.h
+.\objects\main.o: ..\HARDWARE\C1016\c1016.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

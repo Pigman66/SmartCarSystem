@@ -3,7 +3,7 @@
 #include "stm32f4xx.h"
 
 
-#define USART6_RX_SIZE 50
+#define USART6_RX_SIZE 26
 
 #define  USART6_CLK			RCC_APB2Periph_USART6
 #define  USART6_TX_CLK		RCC_AHB1Periph_GPIOC

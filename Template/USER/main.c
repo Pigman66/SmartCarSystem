@@ -3,15 +3,17 @@
 #include "usart.h"
 #include "beep.h"
 #include "dht11.h"
+#include "key.h"
+#include "led.h"
 #include "tim.h"
 #include "i2c.h"
 #include "bh1750fvi.h"
 #include "drv8837.h"
-#include "usart6.h"
 #include "sk6812.h"
 #include "bkrcspeak.h"
 #include "biss0001.h"
 #include "sg90.h"
+#include "c1016.h"
 #include <stdio.h>
 
 extern u8 usart1_buff[USART_BUFFER_SIZE];
@@ -26,21 +28,47 @@ int main(void)
 	
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	Delay_Init();
+	LED_Hardware_Init();			/*初始化LED*/
+	KEY_Init();						/*初始化按键*/
 	USART1_Init(115200);			/*初始化串口1*/
 	DHT11_Init();					/*初始化温湿度传感器*/
 	BEEP_Init();					/*初始化蜂鸣器*/
 	TIM14_PWMInit(84-1, 1000);		/*初始化定时器，驱动风扇*/
 	TIM13_PWMInit(84-1, 3000);		/*初始化定时器，驱动舵机*/
+	TIM3_Init(83,999);
 	IIC_Init();						/*初始化IIC2*/
 	BH1750_Init();					/*初始化光照传感器*/
 	//DRV8837_Mode(DRV8837_Mode1);	/*初始化电机*/
-	Voice_Init();					/*初始化语音助手*/
+	//Voice_Init();					/*初始化语音助手*/
 	SK6812_Init();					/*初始化可变LED灯*/
 	BISS0001_Init();				/*初始化红外热释电传感器*/
+	C1016_Init();					/*初始化指纹识别*/
 	
 	while(1)
 	{
+		C1016_Identify(); //指纹识别
+		switch(KEY_Scan(0))
+		{
+			case KEY0_Press:
+				c1016_identify_key = 1;
+				C1016_Enroll(setidnnumber);
+				break;
+			case KEY1_Press:
+				USART_SendString(USART1, "remove all id\r\n");
+				setidnnumber = 1;
+				C1016_cmd_Delete();
+				Delay_ms(500);
+				break;
+			case KEY2_Press:
+				break;
+			default:
+				break;
+			
+				
+		}
 		
+		
+#if 0		
 		DHT11_ReadData(&temp, &humi);
 		sprintf(buf, "temp:%2.1f\r\n", temp/10.0);
 		USART_SendString(USART1, buf);
@@ -70,6 +98,8 @@ int main(void)
 			USART_SendString(USART1, "person\r\n");
 			CTRL_On();
 		}
+		
+#endif
 
 		
 		//BH1750_Test();
@@ -105,7 +135,6 @@ int main(void)
 		Delay_ms(1000);
 #endif
 		
-		Delay_ms(50);
 
 	} 
 }

@@ -1,10 +1,10 @@
 #include "usart6.h"
+#include "c1016.h"
 
-
+//储存串口6接收数据的数组
+uint8_t usart6_buffer[USART6_RX_SIZE] = { 0 };
 //Usart6的缓冲区长度
 uint16_t usart6_length = 0;
-
-uint8_t voice_falg = 0;
 
 void USART6_Init(uint32_t baudrate)
 {
@@ -56,13 +56,11 @@ void USART6_Init(uint32_t baudrate)
     USART_Cmd(USART6, ENABLE);
 }
 
-
-uint8_t usart6_buffer[USART6_RX_SIZE] = { 0 };
-uint8_t usart6_flag = 0;	
-uint8_t usart6_date = 0;	
 /*中断服务函数*/
 void USART6_IRQHandler(void)
 {
+
+#if 0
 	if(USART_GetITStatus(USART6, USART_IT_RXNE) == SET)
 	{
 		usart6_date = USART_ReceiveData(USART6);
@@ -102,8 +100,25 @@ void USART6_IRQHandler(void)
 			usart6_buffer[0] = 0x00;
 		}
 	}
+	
+	USART_ClearITPendingBit(USART6, USART_IT_RXNE);
+#endif
+	
+	if(USART_GetITStatus(USART6,USART_IT_RXNE) == SET)
+    {	
+			 //读取串口数据
+        aRxBuffer[usart6_length++] = USART_ReceiveData(USART6);
+        //如果储存超出长度
+        if(usart6_length >= USART6_RX_SIZE)
+        {
+            c1016_rx_flag=1;
+            usart6_length = 0;
+        }
+    }
+	//清除串口中断接收标志位
+	USART_ClearITPendingBit(USART2,USART_IT_RXNE);
 
-    USART_ClearITPendingBit(USART6, USART_IT_RXNE);
+    
 }
 
 /*发送一个字节数据*/
